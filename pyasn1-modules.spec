@@ -4,7 +4,7 @@
 #
 Name     : pyasn1-modules
 Version  : 0.0.8
-Release  : 3
+Release  : 4
 URL      : https://pypi.python.org/packages/source/p/pyasn1-modules/pyasn1-modules-0.0.8.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pyasn1-modules/pyasn1-modules-0.0.8.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
