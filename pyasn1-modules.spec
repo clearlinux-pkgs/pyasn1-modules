@@ -4,7 +4,7 @@
 #
 Name     : pyasn1-modules
 Version  : 0.0.8
-Release  : 12
+Release  : 13
 URL      : https://pypi.python.org/packages/source/p/pyasn1-modules/pyasn1-modules-0.0.8.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pyasn1-modules/pyasn1-modules-0.0.8.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
@@ -35,13 +35,16 @@ python components for the pyasn1-modules package.
 %setup -q -n pyasn1-modules-0.0.8
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484563370
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1484563370
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files
 %defattr(-,root,root,-)
