@@ -4,12 +4,13 @@
 #
 Name     : pyasn1-modules
 Version  : 0.1.1
-Release  : 19
+Release  : 20
 URL      : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.1.1.tar.gz
 Source0  : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.1.1.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
 Group    : Development/Tools
 License  : BSD-2-Clause
+Requires: pyasn1-modules-legacypython
 Requires: pyasn1-modules-python
 Requires: pyasn1
 BuildRequires : pbr
@@ -27,9 +28,18 @@ ASN.1 modules for Python
 [![Coverage Status](https://img.shields.io/codecov/c/github/etingof/pyasn1-modules.svg)](https://codecov.io/github/etingof/pyasn1-modules/)
 [![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/etingof/pyasn1-modules/master/LICENSE.txt)
 
+%package legacypython
+Summary: legacypython components for the pyasn1-modules package.
+Group: Default
+
+%description legacypython
+legacypython components for the pyasn1-modules package.
+
+
 %package python
 Summary: python components for the pyasn1-modules package.
 Group: Default
+Requires: pyasn1-modules-legacypython
 
 %description python
 python components for the pyasn1-modules package.
@@ -43,12 +53,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503939509
+export SOURCE_DATE_EPOCH=1505056628
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503939509
+export SOURCE_DATE_EPOCH=1505056628
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -59,7 +69,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
