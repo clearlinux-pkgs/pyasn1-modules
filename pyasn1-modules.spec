@@ -4,7 +4,7 @@
 #
 Name     : pyasn1-modules
 Version  : 0.1.1
-Release  : 20
+Release  : 21
 URL      : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.1.1.tar.gz
 Source0  : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.1.1.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
@@ -53,12 +53,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505056628
+export SOURCE_DATE_EPOCH=1505406945
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505056628
+export SOURCE_DATE_EPOCH=1505406945
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
