@@ -4,7 +4,7 @@
 #
 Name     : pyasn1-modules
 Version  : 0.2.2
-Release  : 36
+Release  : 37
 URL      : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.2.2.tar.gz
 Source0  : https://pypi.debian.net/pyasn1-modules/pyasn1-modules-0.2.2.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
