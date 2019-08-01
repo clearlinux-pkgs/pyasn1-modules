@@ -1,5 +1,5 @@
 PKG_NAME := pyasn1-modules
-URL = https://files.pythonhosted.org/packages/ec/0b/69620cb04a016e4a1e8e352e8a42717862129b574b3479adb2358a1f12f7/pyasn1-modules-0.2.5.tar.gz
+URL = https://files.pythonhosted.org/packages/f1/a9/a1ef72a0e43feff643cf0130a08123dea76205e7a0dda37e3efb5f054a31/pyasn1-modules-0.2.6.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
