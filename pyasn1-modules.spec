@@ -4,7 +4,7 @@
 #
 Name     : pyasn1-modules
 Version  : 0.2.7
-Release  : 45
+Release  : 47
 URL      : https://files.pythonhosted.org/packages/75/93/c51104ea6a74252957c341ccd110b65efecc18edfd386b666637d67d4d10/pyasn1-modules-0.2.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/75/93/c51104ea6a74252957c341ccd110b65efecc18edfd386b666637d67d4d10/pyasn1-modules-0.2.7.tar.gz
 Summary  : A collection of ASN.1-based protocols modules.
