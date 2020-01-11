@@ -3,3 +3,4 @@ conda
 oauth2client
 paramiko
 pypowervm
+python-ldap
